@@ -1,0 +1,39 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+exporters:
+  logging:
+    logLevel: debug
+  elastic:
+    apm_server_url: http://apm-server:8200
+  elasticsearch:
+    endpoints: [http://elasticsearch:9200]
+    index: logging
+
+processors:
+  batch:
+
+extensions:
+  health_check:
+  pprof:
+    endpoint: :1888
+  zpages:
+    endpoint: :55679
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [elastic, logging]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [elastic]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, elasticsearch]

@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3E077970-79C0-48BC-AA98-866BEC7A34A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A97AE42F-A495-4561-9C69-8F1B84B000B9}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A59734DD-0CEB-4D65-AED3-84AB80448D5F}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VF.Logging.OpenTelemetry", "src\VF.Logging.OpenTelemetry\VF.Logging.OpenTelemetry.csproj", "{32DC662B-2A26-4C06-A7F8-EA4AF2197507}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VF.Logging.OpenTelemetry.Instrumentation.Confluent.Kafka", "src\VF.Logging.OpenTelemetry.Instrumentation.Confluent.Kafka\VF.Logging.OpenTelemetry.Instrumentation.Confluent.Kafka.csproj", "{70528475-0AEC-477F-A385-82787185F6B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VF.Logging.OpenTelemetry.Logs.Serilog.Sinks.File", "src\VF.Logging.OpenTelemetry.Logs.Serilog.Sinks.File\VF.Logging.OpenTelemetry.Logs.Serilog.Sinks.File.csproj", "{EE1F3744-6AE4-44C7-A652-9175015A6FFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VF.Logging.OpenTelemetry.Instrumentation.Confluent.Kafka.UnitTests", "tests\Logging.OpenTelemetry.Instrumentation.Confluent.Kafka.UnitTests\VF.Logging.OpenTelemetry.Instrumentation.Confluent.Kafka.UnitTests.csproj", "{5C82E7F8-16ED-40A6-9BE5-434579088F7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VF.Logging.OpenTelemetry.Logs.Serilog.Sinks.File.UnitTests", "tests\Logging.OpenTelemetry.Logs.Serilog.Sinks.File.UnitTests\VF.Logging.OpenTelemetry.Logs.Serilog.Sinks.File.UnitTests.csproj", "{565AF55D-DF88-47D7-9755-2E1037394BFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VF.Logging.OpenTelemetry.UnitTests", "tests\Logging.OpenTelemetry.UnitTests\Snp.Logging.OpenTelemetry.UnitTests\VF.Logging.OpenTelemetry.UnitTests.csproj", "{61735936-8611-4D35-B22F-9319646187D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32DC662B-2A26-4C06-A7F8-EA4AF2197507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DC662B-2A26-4C06-A7F8-EA4AF2197507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DC662B-2A26-4C06-A7F8-EA4AF2197507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DC662B-2A26-4C06-A7F8-EA4AF2197507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70528475-0AEC-477F-A385-82787185F6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70528475-0AEC-477F-A385-82787185F6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70528475-0AEC-477F-A385-82787185F6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70528475-0AEC-477F-A385-82787185F6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1F3744-6AE4-44C7-A652-9175015A6FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1F3744-6AE4-44C7-A652-9175015A6FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1F3744-6AE4-44C7-A652-9175015A6FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1F3744-6AE4-44C7-A652-9175015A6FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C82E7F8-16ED-40A6-9BE5-434579088F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C82E7F8-16ED-40A6-9BE5-434579088F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C82E7F8-16ED-40A6-9BE5-434579088F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C82E7F8-16ED-40A6-9BE5-434579088F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565AF55D-DF88-47D7-9755-2E1037394BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565AF55D-DF88-47D7-9755-2E1037394BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565AF55D-DF88-47D7-9755-2E1037394BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565AF55D-DF88-47D7-9755-2E1037394BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61735936-8611-4D35-B22F-9319646187D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61735936-8611-4D35-B22F-9319646187D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61735936-8611-4D35-B22F-9319646187D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61735936-8611-4D35-B22F-9319646187D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32DC662B-2A26-4C06-A7F8-EA4AF2197507} = {3E077970-79C0-48BC-AA98-866BEC7A34A0}
+		{70528475-0AEC-477F-A385-82787185F6B6} = {3E077970-79C0-48BC-AA98-866BEC7A34A0}
+		{EE1F3744-6AE4-44C7-A652-9175015A6FFC} = {3E077970-79C0-48BC-AA98-866BEC7A34A0}
+		{5C82E7F8-16ED-40A6-9BE5-434579088F7A} = {A97AE42F-A495-4561-9C69-8F1B84B000B9}
+		{565AF55D-DF88-47D7-9755-2E1037394BFF} = {A97AE42F-A495-4561-9C69-8F1B84B000B9}
+		{61735936-8611-4D35-B22F-9319646187D5} = {A97AE42F-A495-4561-9C69-8F1B84B000B9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4ED2674-D696-421B-AB3C-CF12FA8AC5E1}
+	EndGlobalSection
+EndGlobal

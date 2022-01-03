@@ -1,0 +1,48 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+  # hostmetrics:
+  #   collection_interval: 30s
+  #   scrapers:
+  #     cpu:
+  #     memory:
+  #     load:
+  #     network:
+  #     paging:
+  #     process:
+  #     processes:
+  #     filesystem:
+  #     disk:
+  filelog:
+    include: [ ./logs/app.log ]
+    start_at: beginning
+    multiline:
+      line_start_pattern: '^([0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9],[0-9]{3} [A-Z]{3} )|\z'
+#Sample log message:
+#2021-05-07 08:20:10,278 INF trace.id=8b470eebd6fe8642bbd2e1d563f0003c span.id=edfc546d9eabed4a
+#  Request finished HTTP/1.1 GET http://localhost/data - - - 500 0 - 7219.8678ms
+
+processors:
+  batch:
+
+exporters:
+  otlp:
+    endpoint: otel-collector:4317
+    insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp]
+    logs:
+      receivers: [filelog]
+      processors: [batch]
+      exporters: [otlp]

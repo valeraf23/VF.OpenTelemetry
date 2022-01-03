@@ -1,0 +1,39 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:57275/",
+      "sslPort": 44352
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchUrl": "Slave1",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Slave1": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:58024"
+    },
+    "Docker (1)": {
+      "commandName": "IISExpress",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/Slave1",
+      "publishAllPorts": true,
+      "useSSL": true
+    },
+    "Docker (2)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/{Scheme}://{ServiceHost}:{ServicePort}/Slave1",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  }
+}

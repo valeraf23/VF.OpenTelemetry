@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>d2b09879-e7a3-42c1-b50a-ea6b06d241db</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus" Version="1.0.0-rc1.1" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
