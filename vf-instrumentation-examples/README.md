@@ -3,12 +3,9 @@ This project is example how you can integrate with snp-instrumentation-sdk.
 
 #### Demo
 
-+ Turn on `VPN`
-+ Go to `Snp folder` where is the `docker-compose.yml`
 + Run `docker-compose up --build`
 + Open [kibana](http://localhost:5601)
   + create ***__apm__*** index. Open `Stack Management --> Index Management`
-  + add [**logging**](../../docs/logs) index
 + Open [swagger](http://localhost/swagger/index.html)
 You can execute next cases:
 ![](./attachments/Swagger.png)
