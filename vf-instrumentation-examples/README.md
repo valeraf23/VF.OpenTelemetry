@@ -1,4 +1,4 @@
-# snp-instrumentation-examples
+# instrumentation-examples
 This project is example how you can integrate with snp-instrumentation-sdk.
 
 #### Demo
